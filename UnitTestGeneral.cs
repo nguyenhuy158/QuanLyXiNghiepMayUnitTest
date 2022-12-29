@@ -68,12 +68,12 @@ namespace QuanLyXiNghiepMayUnitTest
             ()
         {
             NguyenLieu nguyenLieu = new NguyenLieu();
-            nguyenLieu.ma = "NL241220220001";
+            nguyenLieu.ma = "NL241220220002";
             nguyenLieu.ten = "ten nguyen lieu test 1";
             nguyenLieu.ghiChu = "khong co";
             bool actual = new FormNguyenLieu().addNguyenLieuToDataBase(nguyenLieu);
 
-            Assert.AreEqual(true, actual);
+            Assert.AreEqual(false, actual);
         }
         [TestMethod]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", @".\DataSource\dataNguyenLieu.csv", "dataNguyenLieu#csv", DataAccessMethod.Sequential)]
